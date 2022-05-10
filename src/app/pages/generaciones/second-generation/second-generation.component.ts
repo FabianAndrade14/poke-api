@@ -36,7 +36,7 @@ export class SecondGenerationComponent implements OnInit {
 
     let pokemonData;
 
-    for ( let i = 151; i <= 251; i++ ) {
+    for ( let i = 152; i <= 251; i++ ) {
       this.pokeService.getPokemons(i).subscribe( res => {
         pokemonData = {
           position: i,
