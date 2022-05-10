@@ -24,7 +24,7 @@ table {
 }
 
 .mat-row:nth-child(odd) {
-  background-color: #2ecc71;
+  background-color: #34ace0;
   & .mat-cell {
     color: white;
   }
@@ -36,7 +36,7 @@ table {
 
 .mat-row:hover {
   cursor: pointer;
-  box-shadow: inset 0 0 0 5px #c0392b;
+  box-shadow: inset 0 0 0 5px #686de0;
 }
 
 ::ng-deep.mat-paginator {

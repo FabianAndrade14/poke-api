@@ -2,7 +2,8 @@
 
 
 .mat-toolbar {
-  background-color: #feca57;
+  background-color: #40407a;
+  color: white;
 }
 
 
@@ -11,7 +12,7 @@ img:hover {
 }
 
 .example-spacer {
-  flex: 0.45 0.45 auto;
+  flex: 1 1 auto;
 }
 
 .kanto {
@@ -27,4 +28,29 @@ img:hover {
 .hoenn {
   height: 30px;
   width: 30px;
+}
+
+.sinnoh {
+  height: 20px;
+  width: 20px;
+}
+
+.teselia {
+  height: 20px;
+  width: 15px;
+}
+
+.kalos {
+  height: 21px;
+  width: 21px;
+}
+
+.alola {
+  height: 20px;
+  width: 20px;
+}
+
+.galar {
+  height: 23px;
+  width: 20px;
 }
