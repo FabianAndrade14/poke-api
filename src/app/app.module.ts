@@ -10,6 +10,9 @@ import { PokeTableComponent } from './components/poke-table/poke-table.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
+// import { SecondGenerationComponent } from './pages/generaciones/second-generation/second-generation.component';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     PokeDetailComponent,
-    PokeTableComponent
+    PokeTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    PagesModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+[
+  {
+    "nombre": "Johto",
+    "redirect": "/johto"
+  },
+  {
+    "nombre": "Hoenn",
+    "redirect": "/hoenn"
+  }
+]

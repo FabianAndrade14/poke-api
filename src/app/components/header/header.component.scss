@@ -2,10 +2,29 @@
 
 
 .mat-toolbar {
-  background-color: $black;
+  background-color: #feca57;
 }
 
 
 img:hover {
   cursor: pointer;
+}
+
+.example-spacer {
+  flex: 0.45 0.45 auto;
+}
+
+.kanto {
+  height: 16px;
+  width: 20px;
+}
+
+.johto {
+  height: 20px;
+  width: 20px;
+}
+
+.hoenn {
+  height: 30px;
+  width: 30px;
 }

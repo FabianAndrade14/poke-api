@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PokeDetailComponent } from './components/poke-detail/poke-detail.component';
 import { PokeTableComponent } from './components/poke-table/poke-table.component';
+import { SecondGenerationComponent } from './pages/generaciones/second-generation/second-generation.component';
 
 const routes: Routes = [
   { path: 'home', component: PokeTableComponent},
+  { path: 'johto', component: SecondGenerationComponent},
   { path: 'pokeDetail/:id', component: PokeDetailComponent},
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: '**', pathMatch: 'full', redirectTo: 'home'},

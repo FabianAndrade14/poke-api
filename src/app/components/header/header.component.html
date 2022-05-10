@@ -1,5 +1,29 @@
 <mat-toolbar>
-    <mat-toolbar-row>
-      <img src="../../../assets/images/poxedex.png" alt="pokedex" width="40" height="40" (click)="home()">
-    </mat-toolbar-row>
+
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button> -->
+
+  <img src="../../../assets/images/poxedex.png" alt="pokedex" width="40" height="40" (click)="home()">
+  <span style="margin-left: 1%;">PokeApp</span>
+
+  <span class="example-spacer"></span>
+
+  <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="home">
+    <img src="https://www.nicepng.com/png/full/383-3832844_charmander-pc-sprite-pixel-art-pokemon-charmander.png" alt=""
+      class="kanto">
+    Kanto
+  </button>
+
+  <button mat-button routerLink="johto">
+    <img src="https://64.media.tumblr.com/8d0487116374ff60e90737c84061136c/tumblr_prfb61O2D01y8n9fro2_1280.png"
+      alt="cyndaquil" class="johto">
+    Johto
+  </button>
+
+  <!-- <button mat-button routerLink="/hoenn">
+    <img src="https://www.pngplay.com/wp-content/uploads/12/Torchic-Pokemon-PNG-Photos.png" alt="torchic" class="hoenn">
+    Hoenn
+  </button> -->
 </mat-toolbar>
+
