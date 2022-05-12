@@ -1,0 +1,102 @@
+@import '../../assets/styles/variables.scss';
+
+.sidenav-container {
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $black;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+//Este es el breakpoint cuando debe desaparecer el sidenav, en este caso sería 768px
+@media ( min-width: 768px ) {
+  .sidenav {
+    display: none;
+  }
+}
+
+// @media ( min-width: 768px) {
+//   .icons {
+//     visibility:hidden !important;
+//   }
+// }
+
+body {
+  margin: 0;
+}
+
+.menu-style {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pokeball {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.example-spacer {
+  flex: 2 2 auto;
+}
+
+.kanto {
+  height: 16px;
+  width: 20px;
+}
+
+.johto {
+  height: 20px;
+  width: 20px;
+}
+
+.hoenn {
+  height: 30px;
+  width: 30px;
+}
+
+.sinnoh {
+  height: 20px;
+  width: 20px;
+}
+
+.teselia {
+  height: 20px;
+  width: 15px;
+}
+
+.kalos {
+  height: 21px;
+  width: 21px;
+}
+
+.alola {
+  height: 20px;
+  width: 20px;
+}
+
+.galar {
+  height: 23px;
+  width: 20px;
+}
+
+.boton {
+  width: 100%;
+}

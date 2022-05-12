@@ -1,0 +1,154 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar class="menu-style" style="background-color: #5352ed;">
+      Pokémenu <img src="https://waiway7.github.io/AudioJS/images/pokeball.png" alt="" class="pokeball">
+    </mat-toolbar>
+
+    <mat-nav-list>
+
+      <button mat-button class="example-icon favorite-icon boton" aria-label="Example icon-button with heart icon"
+        routerLink="home">
+        <img src="https://www.nicepng.com/png/full/383-3832844_charmander-pc-sprite-pixel-art-pokemon-charmander.png"
+          alt="" class="kanto">
+        Kanto
+      </button>
+
+      <button mat-button routerLink="johto" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img src="https://64.media.tumblr.com/8d0487116374ff60e90737c84061136c/tumblr_prfb61O2D01y8n9fro2_1280.png"
+          alt="cyndaquil" class="johto">
+        Johto
+      </button>
+
+      <button mat-button routerLink="/hoenn" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img src="https://www.pngplay.com/wp-content/uploads/12/Torchic-Pokemon-PNG-Photos.png" alt="torchic"
+          class="hoenn">
+        Hoenn
+      </button>
+
+      <button mat-button routerLink="/sinnoh" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3806b5bbf737862.png"
+          alt="chimchar" class="sinnoh">
+        Sinnoh
+      </button>
+
+      <button mat-button routerLink="/teselia" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/854978fded0e849.png"
+          alt="oshawott" class="teselia">
+        Teselia
+      </button>
+
+      <button mat-button routerLink="/kalos" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img src="http://24.media.tumblr.com/4387e85b10f5acfcd6dde634bad0eeaf/tumblr_ms7w2tvude1scncwdo1_500.gif"
+          alt="Froakie" class="kalos">
+        Kalos
+      </button>
+
+      <button mat-button routerLink="/alola" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525c19-ca73-40d2-af32-6f8448a34501/daf0mhq-96e9f264-90b6-4f47-896d-2a99f5312c59.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjNTI1YzE5LWNhNzMtNDBkMi1hZjMyLTZmODQ0OGEzNDUwMVwvZGFmMG1ocS05NmU5ZjI2NC05MGI2LTRmNDctODk2ZC0yYTk5ZjUzMTJjNTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YCTvY6ydvAsachJZEey2L-AS1UkIJOkcCnZDhxhilBU"
+          alt="litten" class="alola">
+        Alola
+      </button>
+
+      <button mat-button routerLink="/galar" class="example-icon favorite-icon boton"
+        aria-label="Example icon-button with heart icon">
+        <img
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d2e0b7c1-448b-4dac-97fe-a08b119ac01d/dda4mzi-41bdcd53-c11a-44b3-9ca6-f880157af16d.png/v1/fill/w_400,h_560,strp/scorbunny_sprite_by_mrcucumber7511_dda4mzi-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QyZTBiN2MxLTQ0OGItNGRhYy05N2ZlLWEwOGIxMTlhYzAxZFwvZGRhNG16aS00MWJkY2Q1My1jMTFhLTQ0YjMtOWNhNi1mODgwMTU3YWYxNmQucG5nIiwiaGVpZ2h0IjoiPD01NjAiLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cL2QyZTBiN2MxLTQ0OGItNGRhYy05N2ZlLWEwOGIxMTlhYzAxZFwvbXJjdWN1bWJlcjc1MTEtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.gkYAZPV-5TmS2xst5kz9NL4-T13tLw0jid4BCAnVfes"
+          alt="scorbunny" class="galar">
+        Galar
+      </button>
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <img src="../../assets/images/poxedex.png" alt="pokedex" width="40" height="40" routerLink="home">
+      <span style="margin-left: 1%;">PokeApp</span>
+
+
+      <span class="example-spacer"></span>
+
+      <div fxShow="true" fxHide.lt-md>
+        <button mat-button class="example-icon favorite-icon kanto1" aria-label="Example icon-button with heart icon"
+          routerLink="home">
+          <img src="https://www.nicepng.com/png/full/383-3832844_charmander-pc-sprite-pixel-art-pokemon-charmander.png"
+            alt="" class="kanto">
+          Kanto
+        </button>
+
+        <button mat-button routerLink="johto">
+          <img src="https://64.media.tumblr.com/8d0487116374ff60e90737c84061136c/tumblr_prfb61O2D01y8n9fro2_1280.png"
+            alt="cyndaquil" class="johto">
+          Johto
+        </button>
+
+        <button mat-button routerLink="/hoenn">
+          <img src="https://www.pngplay.com/wp-content/uploads/12/Torchic-Pokemon-PNG-Photos.png" alt="torchic"
+            class="hoenn">
+          Hoenn
+        </button>
+
+        <button mat-button routerLink="/sinnoh">
+          <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3806b5bbf737862.png"
+            alt="chimchar" class="sinnoh">
+          Sinnoh
+        </button>
+
+        <button mat-button routerLink="/teselia">
+          <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/854978fded0e849.png"
+            alt="oshawott" class="teselia">
+          Teselia
+        </button>
+
+        <button mat-button routerLink="/kalos">
+          <img src="http://24.media.tumblr.com/4387e85b10f5acfcd6dde634bad0eeaf/tumblr_ms7w2tvude1scncwdo1_500.gif"
+            alt="Froakie" class="kalos">
+          Kalos
+        </button>
+
+        <button mat-button routerLink="/alola">
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c525c19-ca73-40d2-af32-6f8448a34501/daf0mhq-96e9f264-90b6-4f47-896d-2a99f5312c59.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjNTI1YzE5LWNhNzMtNDBkMi1hZjMyLTZmODQ0OGEzNDUwMVwvZGFmMG1ocS05NmU5ZjI2NC05MGI2LTRmNDctODk2ZC0yYTk5ZjUzMTJjNTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YCTvY6ydvAsachJZEey2L-AS1UkIJOkcCnZDhxhilBU"
+            alt="litten" class="alola">
+          Alola
+        </button>
+
+        <button mat-button routerLink="/galar">
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d2e0b7c1-448b-4dac-97fe-a08b119ac01d/dda4mzi-41bdcd53-c11a-44b3-9ca6-f880157af16d.png/v1/fill/w_400,h_560,strp/scorbunny_sprite_by_mrcucumber7511_dda4mzi-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QyZTBiN2MxLTQ0OGItNGRhYy05N2ZlLWEwOGIxMTlhYzAxZFwvZGRhNG16aS00MWJkY2Q1My1jMTFhLTQ0YjMtOWNhNi1mODgwMTU3YWYxNmQucG5nIiwiaGVpZ2h0IjoiPD01NjAiLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cL2QyZTBiN2MxLTQ0OGItNGRhYy05N2ZlLWEwOGIxMTlhYzAxZFwvbXJjdWN1bWJlcjc1MTEtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.gkYAZPV-5TmS2xst5kz9NL4-T13tLw0jid4BCAnVfes"
+            alt="scorbunny" class="galar">
+          Galar
+        </button>
+
+      </div>
+
+
+
+    </mat-toolbar>
+
+    <router-outlet>
+
+    </router-outlet>
+
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

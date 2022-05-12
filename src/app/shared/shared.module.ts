@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MaterialModule } from 'src/shared/material.module';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [],
@@ -16,10 +17,12 @@ import { MaterialModule } from 'src/shared/material.module';
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatGridListModule,
+    MatListModule,
     MatIconModule,
     MatButtonModule,
     MaterialModule,
+    MatSidenavModule,
+    FlexLayoutModule,
   ]
 })
 export class SharedModule { }

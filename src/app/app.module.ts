@@ -13,6 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 // import { SecondGenerationComponent } from './pages/generaciones/second-generation/second-generation.component';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -21,6 +29,7 @@ import { SharedModule } from './shared/shared.module';
     HeaderComponent,
     PokeDetailComponent,
     PokeTableComponent,
+    MainNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +39,13 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     PagesModule,
     SharedModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
