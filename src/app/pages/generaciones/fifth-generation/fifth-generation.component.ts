@@ -4,11 +4,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
-
 @Component({
   selector: 'app-fifth-generation',
   templateUrl: './fifth-generation.component.html',
-  styleUrls: ['./fifth-generation.component.scss']
+  styleUrls: ['./fifth-generation.component.scss'],
 })
 export class FifthGenerationComponent implements OnInit {
   displayedColumns: string[] = ['position', 'image', 'name'];
@@ -21,50 +20,47 @@ export class FifthGenerationComponent implements OnInit {
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator | any;
 
-  constructor(
-    private pokeService: PokemonService,
-    private router: Router,
-  ) { }
+  constructor(private pokeService: PokemonService, private router: Router) {}
 
   ngOnInit(): void {
     this.getPokemonFifthGen();
   }
 
   getPokemonFifthGen() {
-
-    let pokemonData;
+    const requests = [];
 
     for (let i = 495; i <= 649; i++) {
-      this.pokeService.getPokemons(i).subscribe( res => {
-        pokemonData = {
-          position: i,
-          image: res.sprites.front_default,
-          name: res.name,
-        };
-        this.data.push(pokemonData);
+      requests.push(
+        this.pokeService
+          .getPokemons(i)
+          .toPromise()
+          .then((res) => ({
+            position: i,
+            image: res.sprites.front_default,
+            name: res.name,
+          }))
+      );
+    }
+
+    Promise.all(requests)
+      .then((pokemonList) => {
+        this.data = pokemonList.sort((a, b) => a.position - b.position);
         this.dataSource = new MatTableDataSource<any>(this.data);
         this.dataSource.paginator = this.paginator;
-      },
-      err => {
-        console.log(err);
       })
-    }
+      .catch((err) => console.log(err));
   }
 
   applyFilter(event: Event) {
-
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if ( this.dataSource.paginator ) {
+    if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-
   }
 
   getRow(row: any) {
     this.router.navigateByUrl(`pokeDetail/${row.position}`);
   }
-
-
 }
