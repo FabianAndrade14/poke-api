@@ -33,23 +33,22 @@ export class ThirdGenerationComponent implements OnInit {
 
   getPokemonThirdGen() {
 
-    let pokemonData;
+    const requests = [];
 
     for (let i = 252; i <= 386; i++) {
-      this.pokeService.getPokemons(i).subscribe( res => {
-        pokemonData = {
-          position: i,
-          image: res.sprites.front_default,
-          name: res.name,
-        };
-        this.data.push(pokemonData);
+      requests.push( this.pokeService.getPokemons(i).toPromise().then((res) => ({
+        position: i,
+        image: res.sprites.front_default,
+        name: res.name,
+      })));
+    }
+
+      Promise.all(requests).then((pokemonList) => {
+        this.data = pokemonList.sort((a, b) => a.position - b.position);
         this.dataSource = new MatTableDataSource<any>(this.data);
         this.dataSource.paginator = this.paginator;
-      },
-      err => {
-        console.log(err);
       })
-    }
+      .catch((err) => console.log(err));
   }
 
   applyFilter(event: Event) {
